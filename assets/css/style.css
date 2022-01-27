@@ -1,0 +1,1491 @@
+/* -------------------------------------------------------------------------- */
+
+
+/*                               GENERAL SETTING                              */
+
+
+/* -------------------------------------------------------------------------- */
+
+
+/* 
+:root {
+    --bg-general: #f4f4f4;
+    --white: white;
+    --black: black;
+    --cardColor: white;
+    --borderCard: white;
+    --shadowLM: 2.4px 4.8px 4.8px hsl(0deg 0% 0% / 0.43);
+    --hover-color: #dc143c;
+    --headerBefore: #ddd;
+} */
+
+
+/* --skill-section-hijo-bg-color: #1c1ea0; */
+
+
+/* ---------------------- darkmode ---------------------- */
+
+:root {
+    --bg-general: rgb(39, 39, 56);
+    --white: rgb(45, 45, 59);
+    --black: white;
+    --cardColor: rgb(45, 45, 59);
+    --borderCard: white;
+    --shadowLM: 1px 1px 10px 1px rgba(255, 255, 255, 1);
+    --hover-color: #dc143c;
+    --headerBefore: #ddd;
+}
+
+* {
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--bg-general);
+    scrollbar-width: thin;
+    overflow-x: hidden;
+}
+
+section {
+    /*height: 100vh;*/
+    background-color: var(--bg-general);
+}
+
+
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    overflow: hidden;
+    background: var(--headerBefore);
+}
+
+#preloader:before {
+    content: "";
+    position: fixed;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+    border: 6px solid #dc143c;
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    -webkit-animation: animate-preloader 1s linear infinite;
+    animation: animate-preloader 1s linear infinite;
+}
+
+@-webkit-keyframes animate-preloader {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate-preloader {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* ----------------------- Idioma ----------------------- */
+
+.idiom {
+    position: absolute;
+    right: 10px;
+    z-index: 20;
+    top: 10px;
+}
+
+.btn-sm {
+    padding: 0;
+}
+
+.sdrop {
+    margin: 0;
+    padding: 0;
+    min-width: none;
+}
+
+.sdrop ul {
+    padding: 0px 0px;
+    margin: 0;
+    min-width: 40px;
+    background-color: transparent;
+    border: none;
+}
+
+.sdrop ul li a {
+    padding: 0.2rem 0.2rem 0.2rem 0.4rem;
+}
+
+.sdrop ul li:hover a {
+    color: var(--hover-color);
+    background-color: transparent;
+    border-radius: 4px;
+}
+
+.idiomicon {
+    width: 16px;
+    height: 16px;
+}
+
+
+/* ------------------ darklight Button ------------------ */
+
+
+/* --------------------- move a icon -------------------- */
+
+.dmode {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 0px;
+    left: -40px;
+    background-color: transparent;
+}
+
+
+/* ------------------ inical state moon ----------------- */
+
+.moon {
+    position: absolute;
+    color: yellow;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #DDDFF9;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    border: 1px solid yellow;
+    box-shadow: 0px 0px 17px 2px;
+    /* box-shadow: 0px 0px 17px 2px rgb(201 4 40); */
+    /* box-shadow: 0px 0px 42px 10px rgba(255, 255, 255, 1); */
+}
+
+.moon:hover {
+    transform: rotate(-30deg);
+}
+
+.moonA {
+    height: 100%;
+    width: 81%;
+}
+
+
+/* ------------------ inicial state sun ----------------- */
+
+.toggleSun {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+    color: var(--black);
+}
+
+.sunA {
+    height: 30px;
+    width: 30px;
+}
+
+
+/* -------------------- after toogle -------------------- */
+
+.sun {
+    /* background-color: yellow; */
+    box-shadow: 0px 0px 17px 2px rgba(201, 4, 40, 1);
+    background-color: var(--hover-color);
+    color: var(--white);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 5px;
+    z-index: 50;
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid red; */
+}
+
+.sun:hover {
+    transform: rotate(-30deg);
+    transition-duration: s;
+}
+
+
+/* -------------------- changeNav Bar ------------------- */
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: rgba(101, 110, 105, 0.2);
+    border-radius: 2px;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: var(--hover-color);
+    border: 3px solid white;
+}
+
+
+/* https://www.digitalocean.com/community/tutorials/css-scrollbars-es */
+
+
+/* ----------------- End Navigation Bar ----------------- */
+
+
+/* ---------------------- nav-area ---------------------- */
+
+.navbar-area {
+    position: absolute;
+    z-index: 20;
+}
+
+
+/* -------------------- nav Container ------------------- */
+
+.nav-container {
+    position: fixed;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    bottom: 40px;
+    left: 40px;
+}
+
+
+/* ----------------------- siteBar ---------------------- */
+
+.site-navbar ul {
+    /* position: absolute;
+    left: 45px; */
+    max-height: 0;
+    overflow: hidden;
+    color: var(--hover-color);
+    list-style: none;
+    transition: .3s;
+    display: flex;
+    margin-bottom: 0;
+    margin-left: 10px;
+    /* padding-left: 0; */
+    border-radius: 3px;
+}
+
+.site-navbar ul li a {
+    /* background-color: transparent; */
+    background-color: rgba(0, 0, 0, .75);
+    padding: 5px;
+    text-decoration: none;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    border-radius: 1px;
+}
+
+.site-navbar ul li:hover a {
+    color: white;
+    /* color: var(--white); */
+    /* background-color: #dc143c; */
+    border-bottom: 3px solid var(--hover-color);
+    transition: 0.4s;
+}
+
+.site-navbar ul.open {
+    /* max-height: 100vh; */
+    overflow: visible;
+}
+
+.navname {
+    margin-left: 10px;
+}
+
+
+/* --------------------- nav toogler -------------------- */
+
+.nav-toggler {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid var(--hover-color);
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    /* position: absolute;
+    bottom: 50px;
+    left: 50px; */
+}
+
+.nav-toggler span,
+.nav-toggler span:before,
+.nav-toggler span:after {
+    width: 20px;
+    height: 3px;
+    background-color: var(--hover-color);
+    display: block;
+    transition: .3s;
+}
+
+.nav-toggler span:before {
+    content: '';
+    transform: translateY(-9px);
+}
+
+.nav-toggler span:after {
+    content: '';
+    transform: translateY(6px);
+}
+
+.nav-toggler.toggler-open span {
+    background-color: transparent;
+}
+
+.nav-toggler.toggler-open span:before {
+    transform: translateY(0px) rotate(45deg);
+}
+
+.nav-toggler.toggler-open span:after {
+    transform: translateY(-3px) rotate(-45deg);
+}
+
+
+/* --------------------- responsive --------------------- */
+
+
+/* mobile breakpoint start */
+
+@media (max-width: 600px) {
+    .idiom {
+        position: absolute;
+        top: 80px;
+    }
+    .navbar-area {
+        background-color: var(--black);
+        /* background-color: rgba(0, 0, 0, .75); */
+        /* opacity: 0.3; */
+        width: 100vw;
+        height: 80px;
+    }
+    .nav-container {
+        top: 20px;
+        /* left: 0px; */
+        width: 80vw;
+        height: 100vh;
+    }
+    .site-navbar ul {
+        position: absolute;
+        top: 60px;
+        left: -48px;
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        /* background-color: greenyellow; */
+        background-color: rgba(0, 0, 0, .75);
+    }
+    .site-navbar ul li:hover a {
+        color: white;
+        /* background-color: #dc143c; */
+        border-bottom: 3px solid var(--hover-color);
+        transition: 0.3s;
+    }
+    .open li span {
+        height: 30px;
+        width: 30px;
+    }
+    .iconav {
+        /* margin-right: 20px; */
+        /* padding-right: 20px; */
+        height: 30px;
+        width: 30px;
+    }
+    .open {
+        height: 100vh;
+        width: 100vw;
+    }
+    .site-navbar ul.open {
+        max-height: 100vh;
+        overflow: visible;
+    }
+    .site-navbar ul li a {
+        background-color: rgba(0, 0, 0, .75);
+        /* background-color: #11dbcf; */
+        /* padding: 5px;
+        padding: 20px; */
+        /* position: absolute; */
+        padding: 0 0 0 40px;
+        /* text-decoration: none; */
+        text-transform: capitalize;
+        display: flex;
+        align-items: center;
+        height: 40px;
+        position: relative;
+        left: -40px;
+        width: 100vw;
+    }
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
+/* mobile breakpoint end */
+
+
+/* -------------------------- - ------------------------- */
+
+.container-padre {
+    background-color: var(--bg-general);
+}
+
+
+/*section-headings Label*/
+
+.section-heading {
+    text-align: center;
+    padding: 2.5vh;
+    padding-bottom: 15px;
+}
+
+.section-heading h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    color: var(--black);
+}
+
+.section-heading h2::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: var(--headerBefore);
+    bottom: 1px;
+    left: calc(50% - 60px);
+}
+
+.section-heading h2::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--hover-color);
+    bottom: 0;
+    left: calc(50% - 20px);
+}
+
+
+/*.container{
+	height: 100vh;
+}*/
+
+.section-hijo {
+    width: 90%;
+    background-color: var(--white);
+    /* background-color: blue; */
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+
+/* -------------------------------------------------------------------------- */
+
+
+/*                               0. SECTION HOME                              */
+
+
+/* -------------------------------------------------------------------------- */
+
+.section-home {
+    /*background-color: blue;*/
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-container {
+    /*background-color: red;*/
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#container-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    filter: opacity(70%);
+}
+
+.child {
+    background-color: white;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 5px solid white;
+    z-index: 10;
+}
+
+.child h1 {
+    width: 120px;
+    height: 120px;
+}
+
+.child img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+
+/*NAME*/
+
+.name {
+    margin-top: 10px;
+}
+
+.name a {
+    color: var(--black);
+    text-decoration: none;
+    filter: opacity();
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.name :hover {
+    text-decoration: none;
+    color: var(--hover-color);
+}
+
+
+/*	ANIMATION PROFILE */
+
+.child2 {
+    color: var(--black);
+    filter: opacity();
+}
+
+.child2 p {
+    font-size: 1rem;
+    font-family: 'Rambla', sans-serif;
+    padding: 0.5rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    /*text-align: center;*/
+    overflow: hidden;
+}
+
+.child2 p span.typed-text {
+    font-weight: normal;
+    color: var(--hover-color);
+}
+
+.child2 p span.cursor {
+    display: inline-block;
+    background-color: var(--hover-color);
+    margin-left: 0.1rem;
+    width: 3px;
+    animation: blink 1s infinite;
+}
+
+.child2 p span.cursor.typing {
+    animation: none;
+}
+
+@keyframes blink {
+    0% {
+        background-color: var(--hover-color);
+    }
+    49% {
+        background-color: var(--hover-color)
+    }
+    50% {
+        background-color: transparent;
+    }
+    99% {
+        background-color: transparent;
+    }
+    100% {
+        background-color: var(--hover-color)
+    }
+}
+
+
+/*Footer*/
+
+.container-footer p {
+    color: var(--hover-color);
+    text-align: center;
+    filter: opacity();
+    /*background-color: red;*/
+}
+
+.container-footer ul {
+    padding: 0;
+    margin: 0;
+    /*text-align: center;*/
+    /*background-color: red;*/
+}
+
+.container-footer ul li {
+    display: inline;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.iconfooter {
+    color: var(--black);
+    width: 25px;
+    height: 40px;
+    filter: opacity();
+}
+
+.iconfooter:hover {
+    color: var(--hover-color);
+}
+
+
+/* -------------------------------------------------------------------------- */
+
+
+/*                                 1. ABOUT ME                                */
+
+
+/* -------------------------------------------------------------------------- */
+
+.section-aboutme {
+    margin-bottom: 5%;
+}
+
+.aboutme-hijo {
+    padding: 20px;
+    margin-top: 2.5%;
+    display: flex;
+    text-align: center;
+    border-radius: 5px;
+    /* border: 1px solid red; */
+    box-shadow: var(--shadowLM);
+}
+
+.aboutme-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*ABOUTME DIV*/
+
+.uncp-logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.aboutme-description {
+    color: var(--black);
+}
+
+.aboutme-description a {
+    color: var(--black);
+}
+
+.aboutme-description a::after,
+.aboutme-description a::before,
+.aboutme-description a:focus,
+.aboutme-description a:hover,
+.aboutme-description a:active,
+.aboutme-description a :visited {
+    text-decoration: none;
+    color: var(--hover-color);
+}
+
+
+/*ABOUTME PREVIEW AND DOWNLOAD */
+
+.preview-and-download {
+    display: flex;
+    justify-content: center;
+}
+
+
+/*PDF ICON PREVIEW*/
+
+.preview-pdf {
+    margin-left: 10px;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.preview-pdf i {
+    transform: scale(2);
+}
+
+.pdfjs {
+    color: var(--hover-color);
+}
+
+
+/*PDF VIEW*/
+
+.pdfviewHide {
+    display: none;
+    width: 2000px;
+}
+
+
+/* Media Query pdfView */
+
+@media (max-width: 900px) {
+    .section-hijo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .pdfviewHide {
+        width: 80vw;
+        height: 100vh;
+    }
+}
+
+
+/*-----------------------------------------*/
+
+
+/*A: Button Preview  &SIN BORDE*/
+
+.button-preview {
+    border: none;
+    background-color: var(--white);
+}
+
+.button-sinborde:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.preview-pdf .button-preview i {
+    color: var(--black);
+}
+
+.preview-pdf .button-preview i:hover {
+    color: var(--hover-color);
+}
+
+
+/*-----------------------------------------*/
+
+
+/*B: Button Download*/
+
+.button-download form {
+    background-color: var(--white);
+    text-align: center;
+}
+
+.button-download form a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: var(--hover-color);
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    letter-spacing: 4px
+}
+
+.button-download a:hover {
+    background: var(--hover-color);
+    color: var(--white);
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--hover-color), 0 0 25px var(--hover-color), 0 0 50px var(--hover-color), 0 0 100px var(--hover-color);
+}
+
+.button-download a span {
+    position: absolute;
+    display: block;
+}
+
+.button-download a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--hover-color));
+    animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+    0% {
+        left: -100%;
+    }
+    50%,
+    100% {
+        left: 100%;
+    }
+}
+
+.button-download a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, var(--hover-color));
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+    0% {
+        top: -100%;
+    }
+    50%,
+    100% {
+        top: 100%;
+    }
+}
+
+.button-download a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, var(--hover-color));
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+    0% {
+        right: -100%;
+    }
+    50%,
+    100% {
+        right: 100%;
+    }
+}
+
+.button-download a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, var(--hover-color));
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+    0% {
+        bottom: -100%;
+    }
+    50%,
+    100% {
+        bottom: 100%;
+    }
+}
+
+
+/* -------------------------------------------------------------------------- */
+
+
+/*                                  2. SKILLS                                 */
+
+
+/* -------------------------------------------------------------------------- */
+
+.skill-hijo {
+    margin-bottom: 5%;
+}
+
+.section-skill .section-hijo {
+    /* background-color: white; */
+    background-color: var(--skill-section-hijo-bg-color);
+    /* background-color: var(--bg-general); */
+}
+
+.card {
+    color: var(--black);
+    height: 250px;
+    width: 250px;
+    /* padding: 20px; */
+    background-color: var(--cardColor);
+    border: 1px solid var(--borderCard);
+    margin: 15px;
+    box-shadow: var(--shadowLM);
+}
+
+.card a:hover {
+    text-decoration: none;
+}
+
+
+/* -------------------------------------------------------------------------- */
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box1 {
+    width: 100px;
+    height: 100px;
+    background-color: var(--cardColor);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.box1 svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    fill: var(--white);
+}
+
+.box1 i {
+    font-size: 36px;
+    position: relative;
+}
+
+.cardFName {
+    padding: 2.5px;
+}
+
+.footerC {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* cambio de color en skill icon -footerCard */
+
+.card:hover .box1 i {
+    color: var(--white);
+}
+
+.card:hover .cardFName {
+    color: var(--black);
+}
+
+
+/* ----------------------------------- Colores------------------------- */
+
+.orange i,
+.orangeF {
+    color: #ff5828;
+}
+
+.card:hover .orange path {
+    fill: #ff5828;
+}
+
+.card:hover .orangeF {
+    /* background-color: #ff5828;	 */
+    fill: #ff5828;
+}
+
+
+/* ------------------------------------------------------------------------ */
+
+.teal i,
+.tealF {
+    color: #11dbcf;
+}
+
+.card:hover .teal path {
+    fill: #11dbcf;
+}
+
+.card:hover .tealF {
+    /* background-color: #11dbcf; */
+    fill: #11dbcf;
+}
+
+
+/* ------------------------------------------------------------------------ */
+
+.blue i,
+.blueF {
+    color: #47aeff;
+}
+
+.card:hover .blue path {
+    fill: #47aeff;
+}
+
+.card:hover .blueF {
+    /* background-color: #47aeff; */
+    fill: #47aeff;
+}
+
+.yellow i,
+.yellowF {
+    color: #ffbb2c;
+}
+
+.card:hover .yellow path {
+    fill: #ffbb2c;
+}
+
+.card:hover .yellowF {
+    /* background-color: #ffbb2c; */
+    fill: #ffbb2c;
+}
+
+.pink i,
+.pinkF {
+    color: #e80368;
+}
+
+.card:hover .pink path {
+    fill: #e80368;
+}
+
+.card:hover .pinkF {
+    /* background-color: #e80368; */
+    fill: #e80368;
+}
+
+.verdeCian i,
+.verdeCianF {
+    color: #3FD8AA;
+}
+
+.card:hover .verdeCian path {
+    fill: #3FD8AA;
+}
+
+.card:hover .verdeCianF {
+    /* background-color: #3FD8AA; */
+    fill: #3FD8AA;
+}
+
+
+/* --------------------- Skill Color /web pages-------------------- */
+
+.FileSkill {
+    width: 100%;
+    height: 100vh;
+    padding: 40px;
+}
+
+.container-hijo .progress {
+    height: 50px;
+    display: block;
+    background: none;
+}
+
+.container-hijo .progress .skill {
+    padding: 10px 0;
+    /* margin: 0 0 6px 0; */
+    text-transform: uppercase;
+    display: block;
+    font-weight: 600;
+    font-family: "Raleway", sans-serif;
+    font-size: small;
+    color: black;
+}
+
+.container-hijo .progress .skill .val {
+    float: right;
+    font-style: normal;
+}
+
+.container-hijo .progress-bar-wrap {
+    background: var(--white);
+    border-radius: 5px;
+}
+
+.container-hijo .progress-bar {
+    width: 1px;
+    height: 10px;
+    transition: .9s;
+    background-color: var(--hover-color);
+    border-radius: 5px;
+}
+
+
+/* -------------------------------------------------------------------------- */
+
+
+/*                              3. Academics                                 */
+
+
+/* -------------------------------------------------------------------------- */
+
+.containerList {
+    font-family: sans-serif;
+    font-size: 1em;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    width: 100%;
+    padding: 5%;
+}
+
+.divListTime h4 {
+    text-align: right;
+    font-size: 14px;
+    padding: 10px 0 10px 0;
+    color: var(--hover-color);
+}
+
+
+/* cubetBullet Bottom InicalState  */
+
+.containerList * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.containerList ul {
+    color: var(--black);
+}
+
+.listTimeLine {
+    position: relative;
+}
+
+.divListTime {
+    padding: 2em 2em 0 2em;
+    position: relative;
+    top: -1.875em;
+    left: 4em;
+    width: 95%;
+}
+
+.unList {
+    position: relative;
+    list-style: none;
+}
+
+.unList:before {
+    background-color: var(--hover-color);
+    content: '';
+    margin-left: -1px;
+    position: absolute;
+    top: 0;
+    left: 2em;
+    width: 2px;
+    height: 100%;
+}
+
+
+/*----------cubetBullet Inical State----------*/
+
+.cubeBullet {
+    transform: rotate(45deg);
+    background-color: var(--white);
+    border: 1px solid var(--hover-color);
+    outline: 10px solid var(--white);
+    display: block;
+    margin: 0.5em 0.5em 0.5em -0.5em;
+    position: absolute;
+    top: 0;
+    left: 2em;
+    width: 16px;
+    height: 16px;
+}
+
+
+/* cubeBullet Animate  after hover off*/
+
+.spin {
+    animation: roll 2s linear;
+    animation-direction: reverse;
+    animation-iteration-count: 0.25;
+    /* border-radius: 50%; */
+}
+
+@keyframes roll {
+    0% {
+        transform: rotate(360deg);
+    }
+    50% {
+        background-color: var(--hover-color);
+    }
+    100% {
+        transform: rotate(0deg);
+        background-color: var(--hover-color);
+    }
+}
+
+
+/* cubeBullet Animate  after hover on*/
+
+.listTimeLine:hover .spin {
+    background-color: var(--hover-color);
+    animation-name: spin;
+    animation-duration: 4s;
+    animation-iteration-count: 0.6;
+    animation-timing-function: linear;
+    animation-direction: reverse;
+    border-radius: 2px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/*----------Inical State Heading----------*/
+
+.headingContainer {
+    position: relative;
+}
+
+.headingContainer a {
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    text-align: center;
+}
+
+.headingHover {
+    position: relative;
+    z-index: 20;
+    background: var(--white);
+    color: var(--hover-color);
+    transition: all 0.35s cubic-bezier(1, 0, 0, 1);
+}
+
+
+/* inicialState to fill heading */
+
+.headingHover::before,
+.headingHover::after {
+    position: absolute;
+    z-index: -1;
+    background: var(--hover-color);
+    transition: all 0.35s cubic-bezier(1, 0, 0, 1);
+    content: '';
+}
+
+
+/*Desde Donde Rellenar*/
+
+.headingHover::after {
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 0;
+}
+
+
+/* headingHover hover ON*/
+
+.listTimeLine:hover .headingHover {
+    color: var(--white);
+}
+
+.listTimeLine:hover .headingHover::after {
+    width: 100%;
+    transition-duration: 2s;
+    transition-delay: 0.25s;
+    transition-timing-function: linear;
+}
+
+
+/* ---------------------- 4.project --------------------- */
+
+
+/* ---------------- Venobox stlyle inline --------------- */
+
+.vbox-inline {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    border-radius: 8px;
+}
+
+.vbox-container {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.vbox-figlio {
+    box-shadow: none;
+}
+
+.venoframe {
+    border-radius: 8px;
+}
+
+
+/* --------------------- nextRelease -------------------- */
+
+.nextRelease {
+    color: var(--black)
+}
+
+.nextRelease:hover {
+    color: var(--hover-color);
+}
+
+.releaseHide {
+    display: none;
+}
+
+
+/* --------------------- projectItem -------------------- */
+
+.project-item:hover a {
+    text-decoration: none;
+}
+
+.cardDesign {
+    background-color: var(--cardColor);
+    padding: 10px;
+}
+
+.card-body {
+    background-color: none;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* .cardDesign:hover .card-body {
+    color: white;
+    background-color: crimson;
+    border: 1px solid crimson;
+    border-radius: 1.5px;
+    transition-duration: 4s;
+} */
+
+
+/* .cardDesign:hover #project-item-name {
+    color: white;
+} */
+
+#project-item-name {
+    color: var(--hover-color);
+}
+
+.project-img {
+    width: 100%;
+    height: 150px;
+    border: 2px solid none;
+}
+
+
+/* ----------------- project Search Card ---------------- */
+
+.headerSearch {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.headerSearch .search-wrapper {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.headerSearch input {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+    border: 1px solid var(--bg-general);
+    border-radius: 3px;
+    transition: border .3s;
+}
+
+.headerSearch input:focus {
+    outline: none;
+    border: 1px solid var(--bg-general);
+}
+
+.cardscss.search-hide {
+    box-shadow: none;
+    opacity: 0.2;
+}
+
+
+/* -------------------------------------------------------------------------- */
+
+
+/*                              5.contactMe                                 */
+
+
+/* -------------------------------------------------------------------------- */
+
+.section-contactme {
+    margin: 20px;
+}
+
+.btnSubmit {
+    margin-top: 1px;
+}
+
+.contactme-hijo {
+    padding: 20px;
+    background-color: var(--white);
+    box-shadow: var(--shadowLM);
+    border-radius: 5px;
+}
+
+.formtxt {
+    color: var(--black);
+}
