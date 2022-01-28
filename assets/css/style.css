@@ -6,8 +6,6 @@
 
 /* -------------------------------------------------------------------------- */
 
-
-/* 
 :root {
     --bg-general: #f4f4f4;
     --white: white;
@@ -17,7 +15,7 @@
     --shadowLM: 2.4px 4.8px 4.8px hsl(0deg 0% 0% / 0.43);
     --hover-color: #dc143c;
     --headerBefore: #ddd;
-} */
+}
 
 
 /* --skill-section-hijo-bg-color: #1c1ea0; */
@@ -25,7 +23,8 @@
 
 /* ---------------------- darkmode ---------------------- */
 
-:root {
+
+/* :root {
     --bg-general: rgb(39, 39, 56);
     --white: rgb(45, 45, 59);
     --black: white;
@@ -34,7 +33,7 @@
     --shadowLM: 1px 1px 10px 1px rgba(255, 255, 255, 1);
     --hover-color: #dc143c;
     --headerBefore: #ddd;
-}
+} */
 
 * {
     margin: 0px;
