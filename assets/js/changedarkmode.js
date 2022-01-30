@@ -21,7 +21,7 @@ var verde = 'green';
 
 
 
-const darkStyle = {
+const lightStyle = {
     bgGeneral: "#f4f4f4",
     white: "white",
     black: "black",
@@ -33,7 +33,7 @@ const darkStyle = {
 }
 
 
-const lightStyle = {
+const darkStyle = {
     bgGeneral: "rgb(39, 39, 56)",
     white: "rgb(45, 45, 59)",
     black: "white",
