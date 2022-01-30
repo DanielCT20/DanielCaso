@@ -113,6 +113,10 @@ section {
     top: 10px;
 }
 
+#idm {
+    display: none;
+}
+
 .btn-sm {
     padding: 0;
 }
@@ -177,7 +181,7 @@ section {
     align-items: center;
     z-index: 20;
     border: 1px solid yellow;
-    box-shadow: 0px 0px 17px 2px;
+    /* box-shadow: 0px 0px 17px 2px; */
     /* box-shadow: 0px 0px 17px 2px rgb(201 4 40); */
     /* box-shadow: 0px 0px 42px 10px rgba(255, 255, 255, 1); */
 }
@@ -378,33 +382,37 @@ body::-webkit-scrollbar-thumb {
 /* mobile breakpoint start */
 
 @media (max-width: 600px) {
-    .idiom {
-        position: absolute;
-        top: 80px;
-    }
+    /* ----------- Inicial SetUp Responsive design ---------- */
     .navbar-area {
-        background-color: var(--black);
-        /* background-color: rgba(0, 0, 0, .75); */
-        /* opacity: 0.3; */
+        /* background-color: lightcoral; */
+        background-color: rgba(0, 0, 0, .75);
         width: 100vw;
         height: 80px;
     }
     .nav-container {
+        position: absolute;
         top: 20px;
+        left: 10px;
         /* left: 0px; */
-        width: 80vw;
-        height: 100vh;
+        /* width: 100vw; */
+        /* height: 100vh; */
+    }
+    .open {
+        width: 120vw;
+        position: absolute;
+        /* right: 0; */
     }
     .site-navbar ul {
         position: absolute;
         top: 60px;
-        left: -48px;
         display: flex;
         flex-direction: column;
-        width: 100vw;
+        width: 110vw;
         height: 100vh;
-        /* background-color: greenyellow; */
+        left: -32px;
+        /* left: -48px; */
         background-color: rgba(0, 0, 0, .75);
+        /* background-color: greenyellow; */
     }
     .site-navbar ul li:hover a {
         color: white;
@@ -433,18 +441,52 @@ body::-webkit-scrollbar-thumb {
     .site-navbar ul li a {
         background-color: rgba(0, 0, 0, .75);
         /* background-color: #11dbcf; */
-        /* padding: 5px;
-        padding: 20px; */
-        /* position: absolute; */
-        padding: 0 0 0 40px;
-        /* text-decoration: none; */
+        padding: 0 0 0 20px;
         text-transform: capitalize;
         display: flex;
         align-items: center;
         height: 40px;
         position: relative;
-        left: -40px;
-        width: 100vw;
+        left: -24px;
+        width: 110vw;
+    }
+    /* ---------------------- dark Mode --------------------- */
+    .dmode {
+        position: absolute;
+        top: -6px;
+        /* left: 100px; */
+        /* margin-right: 20px; */
+    }
+    .toggleSun {
+        height: 40px;
+        width: 40px;
+    }
+    .moon {
+        box-shadow: none;
+        height: 40px;
+        width: 40px;
+    }
+    /* ----------------- Change Color Idiom ----------------- */
+    .idiom {
+        position: absolute;
+        top: 20px;
+        left: 100px;
+        z-index: 1000;
+        /* left: 150px; */
+        /* transform: scale(1.35); */
+        /* margin-right: 80px; */
+    }
+    .dropdown {
+        display: none;
+    }
+    #idm {
+        color: #dc143c;
+        display: flex;
+        position: absolute;
+        z-index: 2000;
+        top: 0px;
+        right: 0;
+        font-size: 20px;
     }
 }
 
