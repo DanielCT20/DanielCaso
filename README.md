@@ -53,12 +53,10 @@ https://danielct20.github.io/DanielCaso/
 * Science
 * Machine learning
 
-<<<<<<< HEAD
----
-=======
+
 ---
   
- ## MIT License
+ ##  License
 
 Copyright (c) 2020 Daniel Caso
 
@@ -81,4 +79,4 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ---
->>>>>>> fbb664833ba0914276508a57110dbed5118e9eac
+
