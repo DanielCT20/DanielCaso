@@ -383,7 +383,8 @@ body::-webkit-scrollbar-thumb {
 
 @media (max-width: 600px) {
     body {
-        /* overflow-y: hidden; */
+        width: 100vw;
+        overflow-x: hidden;
     }
     /* ----------- Inicial SetUp Responsive design ---------- */
     .navbar-area {
