@@ -382,12 +382,17 @@ body::-webkit-scrollbar-thumb {
 /* mobile breakpoint start */
 
 @media (max-width: 600px) {
+    body {
+        /* overflow-y: hidden; */
+    }
     /* ----------- Inicial SetUp Responsive design ---------- */
     .navbar-area {
         /* background-color: lightcoral; */
         background-color: rgba(0, 0, 0, .75);
         width: 100vw;
         height: 80px;
+        position: absolute;
+        left: 0px;
     }
     .nav-container {
         position: absolute;
@@ -398,7 +403,7 @@ body::-webkit-scrollbar-thumb {
         /* height: 100vh; */
     }
     .open {
-        width: 120vw;
+        width: 100vw;
         position: absolute;
         /* right: 0; */
     }
@@ -407,9 +412,9 @@ body::-webkit-scrollbar-thumb {
         top: 60px;
         display: flex;
         flex-direction: column;
-        width: 110vw;
-        height: 100vh;
-        left: -32px;
+        width: 100vw;
+        height: calc(100vh - 80px);
+        left: -10px;
         /* left: -48px; */
         background-color: rgba(0, 0, 0, .75);
         /* background-color: greenyellow; */
@@ -437,18 +442,20 @@ body::-webkit-scrollbar-thumb {
     .site-navbar ul.open {
         max-height: 100vh;
         overflow: visible;
+        margin: 0;
+        padding: 0;
     }
     .site-navbar ul li a {
         background-color: rgba(0, 0, 0, .75);
         /* background-color: #11dbcf; */
+        /* position: absolute; */
         padding: 0 0 0 20px;
         text-transform: capitalize;
         display: flex;
         align-items: center;
         height: 40px;
-        position: relative;
-        left: -24px;
-        width: 110vw;
+        left: 0px;
+        width: 100vw;
     }
     /* ---------------------- dark Mode --------------------- */
     .dmode {
