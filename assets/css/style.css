@@ -1217,6 +1217,12 @@ body::-webkit-scrollbar-thumb {
 
 /* -------------------------------------------------------------------------- */
 
+.containerList * {
+    box-sizing: border-box;
+    margin: 0;
+    /* padding: 0; */
+}
+
 .containerList {
     font-family: sans-serif;
     font-size: 1em;
@@ -1234,33 +1240,88 @@ body::-webkit-scrollbar-thumb {
 }
 
 
-/* cubetBullet Bottom InicalState  */
+/* .containerList ul {
+    color: var(--black);
+} */
 
-.containerList * {
-    box-sizing: border-box;
-    margin: 0;
+.changemode {
+    color: var(--black);
+}
+
+.listContent {
+    background-color: transparent;
+    position: relative;
+    width: 100%;
     padding: 0;
 }
 
-.containerList ul {
-    color: var(--black);
+
+/* 
+.rowAcademics {
+    position: relative;
+    width: 100%;
+    padding: 0;
+} */
+
+.rowCopy {
+    width: 100%;
+    display: flex;
 }
+
+.bold {
+    font-weight: bold;
+}
+
+.hcolor {
+    color: var(--hover-color);
+}
+
+.column1 ul li::marker {
+    color: var(--hover-color);
+}
+
+.column1 {
+    display: contents;
+    /* width: calc(100% / 3); */
+}
+
+.column2 {
+    padding: 0;
+}
+
+
+/* hereDisplay */
+
+@media (max-width: 600px) {
+    .rowCopy {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .column2 {
+        padding-left: 2em;
+    }
+}
+
+
+/* cubetBullet Bottom InicalState  */
 
 .listTimeLine {
     position: relative;
 }
 
 .divListTime {
-    padding: 2em 2em 0 2em;
+    padding: 2em 0 0 2em;
     position: relative;
     top: -1.875em;
-    left: 4em;
-    width: 95%;
+    left: 1em;
+    width: 100%;
 }
 
 .unList {
     position: relative;
     list-style: none;
+    padding: 0;
 }
 
 .unList:before {
@@ -1289,6 +1350,7 @@ body::-webkit-scrollbar-thumb {
     left: 2em;
     width: 16px;
     height: 16px;
+    border-radius: 2px;
 }
 
 
@@ -1341,9 +1403,14 @@ body::-webkit-scrollbar-thumb {
 
 .headingContainer {
     position: relative;
+    /* position: absolute;
+    left: 0;
+    width: 95%; */
 }
 
 .headingContainer a {
+    /* position: absolute;
+    left: 0; */
     display: block;
     width: 100%;
     height: 40px;
@@ -1385,7 +1452,8 @@ body::-webkit-scrollbar-thumb {
 /* headingHover hover ON*/
 
 .listTimeLine:hover .headingHover {
-    color: var(--white);
+    color: white;
+    /* color: var(--black); */
 }
 
 .listTimeLine:hover .headingHover::after {
